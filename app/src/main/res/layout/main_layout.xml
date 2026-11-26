@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Фильтрация по рейтингу (строго больше)"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etFilterRating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Мин. рейтинг (напр. 8.3)"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/btnFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Фильтр" />
+
+            <Button
+                android:id="@+id/btnSortDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Сорт. ↓" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMinInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Добавить новый фильм"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Название фильма"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/etNewRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Рейтинг (например, 8.5)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etNewDirector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Режиссёр (например, К. Нолан)"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/etNewGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Жанры через запятую (напр. драма, триллер)"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnAddMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Добавить, сериализовать и сохранить в файл" />
+
+        <TextView
+            android:id="@+id/tvOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="monospace"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</ScrollView>

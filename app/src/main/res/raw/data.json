@@ -1,0 +1,14 @@
+{
+  "movies": [
+    {"id": 1, "title": "Интерстеллар", "rating": 8.6, "watched": true,
+      "director": {"name": "К. Нолан", "born": 1970},
+      "genres": ["фантастика", "драма"]},
+    {"id": 2, "title": "Брат", "rating": 8.3, "watched": false,
+      "director": {"name": "А. Балабанов", "born": 1959},
+      "genres": ["драма", "криминал"]},
+    {"id": 3, "title": "Матрица", "rating": 8.7, "watched": true,
+      "director": {"name": "Л. и Л. Вачовски", "born": 1965},
+      "genres": ["фантастика", "боевик"]}
+  ],
+  "total": 3
+}
